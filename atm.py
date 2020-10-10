@@ -24,7 +24,7 @@ _ = system('clear')
 
 username1 = raw_input("please enter your username : ")
 password1 = raw_input("please enter your password : ")
-mytext0 = 'welcom again' + username1 + "now you are logged in with your new acco                                                                                        unt and password"
+mytext0 = 'welcom again' + username1 + "now you are logged in with your new account and password"
 language= 'hi'
 
 myobj0 = gTTS(text=mytext0, lang=language, slow=False)
@@ -39,7 +39,7 @@ _ = system('clear')
 print("Hellow " + username1 + " you are now logged in with a password")
 
 
-mytext1 = 'please type exit for verification of login and to enter ATM process.                                                                                         or enter any key to go out  from this session'
+mytext1 = 'please type exit for verification of login and to enter ATM process. or enter any key to go out  from this session'
 language = 'hi'
 myobj1 = gTTS(text=mytext1, lang=language, slow=False)
 
@@ -49,7 +49,7 @@ os.system("mpg321 audio.mp3")
 
 _ = system('clear')
 
-command = raw_input("please logoff for further verfication  \nto logoff type exi                                                                                        t: ")
+command = raw_input("please logoff for further verfication  \nto logoff type exit: ")
 if command == "exit":
         print("You are loged off now")
 
@@ -74,7 +74,7 @@ attempt = 0
 
 while username != username1 or password != password1:
         if attempt > 2:
-                 mytext32 = 'sorry continues three unsuccessful attempts please                                                                                         try again later'
+                 mytext32 = 'sorry continues three unsuccessful attempts pleas try again later'
                  language = 'hi'
                  myobj32 = gTTS(text=mytext32, lang=language, slow=False)
 
@@ -88,7 +88,7 @@ while username != username1 or password != password1:
         sys.exit()
 
         attempt = attempt + 1
-        mytext3 = 'sorry!! the password or username does is not matching. please                                                                                         re enter the username and password'
+        mytext3 = 'sorry!! the password or username does is not matching. please re enter the username and password'
         language = 'hi'
         myobj3 = gTTS(text=mytext3, lang=language, slow=False)
 
@@ -97,7 +97,7 @@ while username != username1 or password != password1:
         os.system("mpg321 verification.mp3")
 
         _ = system('clear')
-        print("sorry username or password is incorrect please re-enter for valid                                                                                        ation ")
+        print("sorry username or password is incorrect please re-enter for validation ")
         username = raw_input("Please enter your username : ")
         password = raw_input("Please enter your password : ")
 
@@ -106,7 +106,7 @@ while username != username1 or password != password1:
 else:
         #print ("Your account number is: ")
         #print random_with_N_digits(12)
-        mytext4 = 'login is successful' + username1 + 'Your Account Number is ge                                                                                        nerated note down your account number'
+        mytext4 = 'login is successful' + username1 + 'Your Account Number is generated note down your account number'
         language = 'hi'
         myobj4 = gTTS(text=mytext4, lang=language, slow=False)
 
@@ -131,7 +131,7 @@ os.system("mpg321 deposit.mp3")
 
 _ = system('clear')
 
-balance = float(raw_input("Enter the amount to be deposited in your account : ")                                                                                        )
+balance = float(raw_input("Enter the amount to be deposited in your account : "))
 
 
 mytext6 = 'please enter the option given below of your favour'
@@ -145,7 +145,7 @@ os.system("mpg321 ver.mp3")
 _ = system('clear')
 def printMenu():
         print("Please choose an option below : ")
-        print("""Enter b to check your Balance \nEnter d to deposite money into                                                                                         your account \nEnter w to withdraw money from your account \nEnter q to quit the                                                                                         session""")
+        print("""Enter b to check your Balance \nEnter d to deposite money into your account \nEnter w to withdraw money from your account \nEnter q to quit the session""")
 
 
 def getTransaction():
@@ -176,7 +176,7 @@ while command != "q":
 
                 _ = system('clear')
 
-                print(username + "Your current balance is", formatCurrency(balan                                                                                        ce))
+                print(username + "Your current balance is", formatCurrency(balance))
                 printMenu()
                 command = str(getTransaction())
                 _ = system('clear')
@@ -211,14 +211,14 @@ while command != "q":
 
                 _ = system('clear')
 
-                amount = float(raw_input("Please enter the amount to be withdraw                                                                                        : "))
+                amount = float(raw_input("Please enter the amount to be withdraw: "))
 
                 withdraw(balance, amount)
                 printMenu()
                 command = str(getTransaction())
                 _ = system('clear')
         else:
-                mytext10 = 'Invalid command. Please enter the options given belo                                                                                        w'
+                mytext10 = 'Invalid command. Please enter the options given below'
                 language = 'hi'
                 myobj10 = gTTS(text=mytext10, lang=language, slow=False)
 
